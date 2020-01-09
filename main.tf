@@ -94,12 +94,8 @@ resource "aws_instance" "this" {
     cpu_credits = local.is_t_instance_type ? var.cpu_credits : null
   }
 
-  dynamic "lifecycle" {
-    content {
-      ignore_changes = merge(
-        var.lifecycle_ignore_changes,
-      )
-    }
+  lifecycle_ignore_changes {
+    ignore_changes = var.lifecycle_ignore_changes
   }
 
 }
