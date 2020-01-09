@@ -189,6 +189,6 @@ variable "use_num_suffix" {
 
 variable "lifecycle_ignore_changes" {
   description = "A list of lifecylce rules to assign to the resource"
-  type        = list(map(string))
+  type        = list(string)
   default     = []
 }
