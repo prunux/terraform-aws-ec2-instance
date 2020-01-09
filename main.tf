@@ -95,7 +95,7 @@ resource "aws_instance" "this" {
   }
 
   lifecycle {
-    ignore_changes = [var.lifecycle_ignore_changes]
+    ignore_changes = var.lifecycle_ignore_changes
   }
 
 }
